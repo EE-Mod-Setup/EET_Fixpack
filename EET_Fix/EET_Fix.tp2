@@ -1,0 +1,14 @@
+BACKUP ~EET_Fix/backup~
+AUTHOR ~Roxanne - Send PM to Roxanne at SHSForums.net~
+
+VERSION ~v1~
+
+BEGIN ~EET Fix~
+
+COPY ~EET_Fix/BPLLYRK.CRE~ ~override~
+SAY NAME1 Llyrk
+SAY NAME2 Llyrk
+
+COMPILE ~EET_Fix/BPSKEL.BAF~
+
+EXTEND_BOTTOM ~ar4000.bcs~ ~EET_Fix/ar4000.baf~
