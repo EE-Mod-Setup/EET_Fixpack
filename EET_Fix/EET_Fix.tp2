@@ -19,5 +19,3 @@ EXTEND_BOTTOM ~ar4000.bcs~ ~EET_Fix/ar4000.baf~
 STRING_SET
 239808 ~They all do, Mae'Var. For the moment.~
 
-//Drake stays in SoD fix
-EXTEND_TOP ~bd0103.bcs~ ~EET_Fix/bd0103.baf~
