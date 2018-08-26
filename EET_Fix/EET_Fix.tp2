@@ -19,3 +19,45 @@ EXTEND_BOTTOM ~ar4000.bcs~ ~EET_Fix/ar4000.baf~
 STRING_SET
 239808 ~They all do, Mae'Var. For the moment.~
 
+//Bandit Camp Chapter Transition
+<<<<<<<< .../baldur.baf
+IF
+  Global("CDLetterCheckscrl2z","GLOBAL",1)
+  !ActuallyInCombat()
+  Global("CHAPTER","GLOBAL",3)
+THEN
+  RESPONSE #100
+    Wait(2)
+    RevealAreaOnMap("BG2200")
+    IncrementChapter("CHPTXT4")
+    AddJournalEntry(215838,INFO)
+    EraseJournalEntry(231450)
+    EraseJournalEntry(231448)
+    EraseJournalEntry(227218)
+    EraseJournalEntry(227217)
+    EraseJournalEntry(227381)
+    EraseJournalEntry(226856)
+    EraseJournalEntry(226861)
+    EraseJournalEntry(227378)
+    EraseJournalEntry(227383)
+    EraseJournalEntry(226850)
+    EraseJournalEntry(227468)
+    EraseJournalEntry(227473)
+    EraseJournalEntry(226862)
+    EraseJournalEntry(227379)
+    EraseJournalEntry(227382)
+    EraseJournalEntry(227469)
+    EraseJournalEntry(227474)
+    EraseJournalEntry(227492)
+    EraseJournalEntry(226858)
+    EraseJournalEntry(227380)
+    EraseJournalEntry(226857)
+    EraseJournalEntry(226859)
+    EraseJournalEntry(227476)
+    EraseJournalEntry(226860)
+    AddJournalEntry(231451,QUEST)
+END
+>>>>>>>>
+
+EXTEND_BOTTOM ~BALDUR.BCS~ ~.../baldur.baf~
+
