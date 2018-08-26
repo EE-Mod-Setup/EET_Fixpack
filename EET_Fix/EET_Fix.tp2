@@ -57,7 +57,91 @@ THEN
     EraseJournalEntry(226860)
     AddJournalEntry(231451,QUEST)
 END
+
+IF
+  GlobalTimerExpired("bd_taerom_vial","GLOBAL")
+  Global("bd_taerom_newitems","GLOBAL",0)
+THEN
+  RESPONSE #100
+    AddStoreItem("taerum","ax1h01q",9,1)
+    AddStoreItem("taerum","blun02q",15,1)
+    AddStoreItem("taerum","blun04q",5,1)
+    AddStoreItem("taerum","blun06q",5,1)
+    AddStoreItem("taerum","dagg01q",0,1)
+    AddStoreItem("taerum","halb01q",5,1)
+    AddStoreItem("taerum","hamm01q",5,1)
+    AddStoreItem("taerum","sper01q",10,1)
+    AddStoreItem("taerum","sw1h01q",3,1)
+    AddStoreItem("taerum","sw1h04q",6,1)
+    AddStoreItem("taerum","sw1h07q",8,1)
+    RemoveStoreItem("taerum","ax1h01",0)
+    RemoveStoreItem("taerum","blun02",0)
+    RemoveStoreItem("taerum","blun04",0)
+    RemoveStoreItem("taerum","blun06",0)
+    RemoveStoreItem("taerum","dagg01",0)
+    RemoveStoreItem("taerum","halb01",0)
+    RemoveStoreItem("taerum","hamm01",0)
+    RemoveStoreItem("taerum","sper01",0)
+    RemoveStoreItem("taerum","sw1h01",0)
+    RemoveStoreItem("taerum","sw1h04",0)
+    RemoveStoreItem("taerum","sw1h07",0)
+    SetGlobal("bd_taerom_newitems","GLOBAL",1)
+END
+
+IF
+  Global("Chapter","GLOBAL",4)
+  GlobalLT("BD_Chapter_Save","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("BD_Chapter_Save","GLOBAL",4)
+    SaveGame(29)
+END
+
+//Marek Cure
+IF
+  Global("PartyCured","GLOBAL",0)
+  TriggerOverride(Player1,Global("bdmarek","LOCALS",1))
+  Dead("Marek")
+THEN
+  RESPONSE #100
+    SetGlobal("PartyCured","GLOBAL",1)
+    AddJournalEntry(227253,QUEST_DONE)
+    EraseJournalEntry(226793)
+    EraseJournalEntry(226982)
+    EraseJournalEntry(227240)
+    EraseJournalEntry(227241)
+    EraseJournalEntry(227242)
+    EraseJournalEntry(227243)
+    EraseJournalEntry(227183)
+    DisplayString(Player1,220675)
+    AddexperienceParty(10000)
+END
+
+IF
+  Global("PartyCured","GLOBAL",0)
+  TriggerOverride(Player1,Global("bdmarek","LOCALS",1))
+  !Dead("Marek")
+THEN
+  RESPONSE #100
+    SetGlobal("PartyCured","GLOBAL",1)
+    AddJournalEntry(231188,QUEST_DONE)
+    EraseJournalEntry(226793)
+    EraseJournalEntry(226982)
+    EraseJournalEntry(227240)
+    EraseJournalEntry(227241)
+    EraseJournalEntry(227242)
+    EraseJournalEntry(227243)
+    EraseJournalEntry(227183)
+    DisplayString(Player1,220675)
+    AddexperienceParty(10000)
+END
+
+IF
+  !InParty(Player1)
+THEN
+  RESPONSE #100
+    GameOver(19377)
+END
 >>>>>>>>
 
 EXTEND_BOTTOM ~BALDUR.BCS~ ~.../baldur.baf~
-
