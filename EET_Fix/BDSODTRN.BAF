@@ -1,0 +1,29 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		ApplySpellRES("clearcld",Myself) 
+		SetGlobal("EndOfBG1","GLOBAL",1)
+		SetGlobal("SOD_fromimport","GLOBAL",1)
+		SetGlobal("PartyCured","GLOBAL",1)
+		Wait(1)
+		ApplySpellRES("clearcld",Myself) 
+		Wait(4)
+		FadeToColor([30.0],0)
+		Wait(1)
+		CopyGroundPilesTo("BD0120",[949.1686])
+		Wait(1)
+		StartMovie("ENDMOVIE")
+		FadeToColor([1.0],0)
+		SetGlobal("EndOfBG1","GLOBAL",1)
+		Wait(3)
+		StartMovie("SODCIN01")
+		FadeToColor([1.0],0)
+		Wait(1)
+		MoveToCampaign("SoD")
+		MultiPlayerSync()
+		SetCutSceneLite(TRUE)
+		EndCutSceneMode()
+END
+

@@ -145,3 +145,6 @@ END
 >>>>>>>>
 
 EXTEND_BOTTOM ~BALDUR.BCS~ ~.../baldur.baf~
+
+//SoD Transition
+COMPILE ~EET_Fix/BDSODTRN.BAF~
