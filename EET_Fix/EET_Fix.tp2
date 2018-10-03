@@ -15,6 +15,9 @@ COMPILE ~EET_Fix/BPSKEL.BAF~
 //Set Chapter on ToB Transition safely
 EXTEND_BOTTOM ~ar4000.bcs~ ~EET_Fix/ar4000.baf~
 
+//Set Global on SoD Transition safely
+EXTEND_TOP ~bd0120.bcs~ ~EET_Fix/bd0120cha.baf~
+
 //Name Shadow Thief kidnapping scene
 STRING_SET
 239808 ~They all do, Mae'Var. For the moment.~
