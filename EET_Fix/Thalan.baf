@@ -1,0 +1,7 @@
+IF
+Global("RumorTalkThalan","GLOBAL",1)
+Delay(12)
+THEN
+RESPONSE #100
+SetGlobal("RumorTalkThalan","GLOBAL",0)
+END

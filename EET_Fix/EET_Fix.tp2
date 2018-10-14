@@ -151,3 +151,6 @@ EXTEND_BOTTOM ~BALDUR.BCS~ ~.../baldur.baf~
 
 //SoD Transition
 COMPILE ~EET_Fix/BDSODTRN.BAF~
+
+//Thalantyr skipped options repair
+EXTEND_BOTTOM ~bg3202.bcs~ ~EET_Fix/Thalan.baf~
