@@ -149,6 +149,8 @@ END
 
 EXTEND_BOTTOM ~BALDUR.BCS~ ~.../baldur.baf~
 
+COPY ~EET_Fix/potn47.itm~ ~override~
+
 //SoD Transition
 COMPILE ~EET_Fix/BDSODTRN.BAF~
 
