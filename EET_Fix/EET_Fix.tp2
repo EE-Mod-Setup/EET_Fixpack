@@ -33,3 +33,8 @@ EXTEND_BOTTOM ~bg3202.bcs~ ~EET_Fix/Thalan.baf~
 
 // WK Spirit Warrior
 COPY ~EET_Fix/FSSPIR1.CRE~ ~override~
+
+// DT level 2 spawn trap
+COPY_EXISTING ~BG0512.are~ ~override~
+WRITE_LONG 0x3bdc 10 
+BUT_ONLY
