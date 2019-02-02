@@ -12,6 +12,9 @@ SAY NAME2 Llyrk
 
 COMPILE ~EET_Fix/BPSKEL.BAF~
 
+EXTEND_TOP
+~LLyrk.BCS~ ~EET_Fix/LLyrk.baf~
+
 //Set Chapter on ToB Transition safely
 EXTEND_BOTTOM ~ar4000.bcs~ ~EET_Fix/ar4000.baf~
 
