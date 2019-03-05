@@ -41,3 +41,10 @@ COPY ~EET_Fix/FSSPIR1.CRE~ ~override~
 COPY_EXISTING ~BG0512.are~ ~override~
 WRITE_LONG 0x3bdc 10 
 BUT_ONLY
+
+// Drizzt Saga Compatibility
+ACTION_IF FILE_EXISTS_IN_GAME ~F_Bel.cre~ THEN BEGIN
+COPY_EXISTING ~F_Bel.cre~ ~override~
+     SAY NAME1 Eltab
+     SAY NAME2 Eltab
+END
