@@ -1,0 +1,12 @@
+IF
+OR(2)
+InMyArea("sufinch")
+InPartyAllowDead("sufinch")
+GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+RESPONSE #100
+ActionOverride("sufinch",LeaveParty())
+SmallWait(1)
+ActionOverride("sufinch",DestroySelf())
+Continue()
+END

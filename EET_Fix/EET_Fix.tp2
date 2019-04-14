@@ -48,3 +48,8 @@ COPY_EXISTING ~F_Bel.cre~ ~override~
      SAY NAME1 Eltab
      SAY NAME2 Eltab
 END
+
+// Finch NPC Compatibility
+ACTION_IF FILE_EXISTS_IN_GAME ~Sufinch4.cre~ THEN BEGIN
+EXTEND_BOTTOM ~BD0103.bcs~ ~EET_Fix/BD0103.baf~
+END
