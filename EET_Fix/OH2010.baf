@@ -1,0 +1,7 @@
+IF
+HasItem("Nebelt01","Neera")
+HasItem("Nebelt01",Player1)
+THEN
+RESPONSE #100
+ActionOverride(Player1,DestroyItem("Nebelt01"))
+END
