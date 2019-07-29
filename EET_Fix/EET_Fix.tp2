@@ -18,6 +18,41 @@ EXTEND_TOP
 //Set Chapter on ToB Transition safely
 EXTEND_BOTTOM ~ar4000.bcs~ ~EET_Fix/ar4000.baf~
 
+// Fix a couple of misaligned wall polygons in the FAI area (by Argent77)
+OUTER_SET trans_y = 45 // vertical distance to move the wallpoly
+COPY_EXISTING ~bg2300.WED~ ~override~
+  READ_LONG 0x98 num_poly
+  READ_LONG 0x9c ofs_poly
+  READ_LONG 0xa0 ofs_vert
+
+  // updating main poly
+  DEFINE_ARRAY pt_y BEGIN 0 0 2899 2891 2887 2910 2944 0 0 0 0 END
+  SET pofs = ofs_poly + 270 * 0x12
+  READ_LONG pofs vidx
+  READ_LONG (pofs + 4) vnum
+  FOR (i = 0; i < vnum; ++i) BEGIN
+    SET vofs = ofs_vert + (vidx + i) * 4
+    PATCH_IF (VARIABLE_IS_SET $pt_y(~%i%~) AND $pt_y(~%i%~) != 0) BEGIN
+      WRITE_SHORT (vofs + 2) (THIS + trans_y)
+    END
+  END
+
+  // updating smaller polys of the portcullis
+  DEFINE_ARRAY polys BEGIN 272 273 274 275 276 END
+  PHP_EACH polys AS _ => pidx BEGIN
+    SET pofs = ofs_poly + pidx * 0x12
+    READ_LONG pofs vidx
+    READ_LONG (pofs + 4) vnum
+    FOR (i = 0; i < vnum; ++i) BEGIN
+      SET vofs = ofs_vert + (vidx + i) * 4
+      WRITE_SHORT (vofs + 2) (THIS + trans_y)
+    END
+    // bounding box
+    WRITE_SHORT (pofs + 14) (THIS + trans_y)
+    WRITE_SHORT (pofs + 16) (THIS + trans_y)
+  END
+BUT_ONLY IF_EXISTS
+
 //Set Global on SoD Transition safely
 EXTEND_TOP ~bd0120.bcs~ ~EET_Fix/bd0120cha.baf~
 
