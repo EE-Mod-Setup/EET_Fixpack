@@ -1,0 +1,9 @@
+IF
+PartyHasItem("MISC8Q")
+!Dead("sahpr2")
+Global("NoAmbush","AR2300",0)
+THEN
+RESPONSE #100
+SetGlobal("NoAmbush","AR2300",1)
+SetGlobal("RebelsHostile","AR2300",0)
+END

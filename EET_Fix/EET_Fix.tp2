@@ -91,3 +91,6 @@ END
 
 //Adoy in SoA Fix
 EXTEND_TOP ~oh2010.bcs~ ~EET_Fix/OH2010.baf~
+
+//Sahuagin rebel Fix
+EXTEND_TOP ~ar2300.bcs~ ~EET_Fix/ar2300.baf~
