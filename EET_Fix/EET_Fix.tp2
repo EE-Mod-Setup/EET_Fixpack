@@ -110,9 +110,9 @@ ADD_KIT ~CVMystra~
 ~0x00004000     3~
 ~FC0~
 ~* * * * * * * * * * * * * * * * * * * *~
-SAY @967
-SAY @765
-SAY @766
+SAY ~priestess of Mystra~
+SAY ~Priestess Of Mystra~
+SAY ~Priestess Of Mystra~
 
 INCLUDE ~SandrahNPC/Kit/fl#add_kit_ee.tpa~
 LAF fl#add_kit_ee 
