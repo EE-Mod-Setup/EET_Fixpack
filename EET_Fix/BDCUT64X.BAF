@@ -1,0 +1,181 @@
+IF
+	Global("bd_party_check","bd6200",0)
+	!Dead("imoen")  // Imoen
+	!InParty("imoen")  // Imoen
+	NumInPartyLT(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",1)
+		ActionOverride("imoen",JoinParty())
+		SmallWait(10)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",0)
+	OR(3)
+		Dead("imoen")  // Imoen
+		InParty("imoen")  // Imoen
+		NumInParty(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",1)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",1)
+	Global("bd_move_minsc","bd6200",1)
+	!Dead("minsc")  // Minsc
+	!InParty("minsc")  // Minsc
+	NumInPartyLT(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",2)
+		ActionOverride("minsc",JoinParty())
+		SmallWait(10)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",1)
+	Global("bd_move_minsc","bd6200",1)
+	!Dead("minsc")  // Minsc
+	!InParty("minsc")  // Minsc
+	NumInParty(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",2)
+		ActionOverride("minsc",GivePartyAllEquipment())
+		SmallWait(10)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",1)
+	OR(4)
+		Global("bd_move_minsc","bd6200",0)
+		Dead("minsc")  // Minsc
+		InParty("minsc")  // Minsc
+		NumInParty(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",2)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",2)
+	Global("bd_move_dynahe","bd6200",1)
+	!Dead("dynaheir")  // Dynaheir
+	!InParty("dynaheir")  // Dynaheir
+	NumInPartyLT(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",3)
+		ActionOverride("dynaheir",JoinParty())
+		SmallWait(10)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",2)
+	OR(4)
+		Global("bd_move_dynahe","bd6200",0)
+		Dead("dynaheir")  // Dynaheir
+		InParty("dynaheir")  // Dynaheir
+		NumInParty(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",3)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",3)
+	Global("bd_move_khalid","bd6200",1)
+	!Dead("khalid")  // Khalid
+	!InParty("khalid")  // Khalid
+	NumInPartyLT(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",4)
+		ActionOverride("khalid",JoinParty())
+		SmallWait(10)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",3)
+	OR(4)
+		Global("bd_move_khalid","bd6200",0)
+		Dead("khalid")  // Khalid
+		InParty("khalid")  // Khalid
+		NumInParty(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",4)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",4)
+	Global("bd_move_jaheir","bd6200",1)
+	!Dead("jaheira")  // Jaheira
+	!InParty("jaheira")  // Jaheira
+	NumInPartyLT(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",5)
+		ActionOverride("jaheira",JoinParty())
+		SmallWait(10)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",4)
+	Global("bd_move_jaheir","bd6200",1)
+	!Dead("jaheira")  // Jaheira
+	!InParty("jaheira")  // Jaheira
+	NumInParty(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",5)
+		ActionOverride("jaheira",GivePartyAllEquipment())
+		SmallWait(10)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",4)
+	OR(4)
+		Global("bd_move_jaheir","bd6200",0)
+		Dead("jaheira")  // Jaheira
+		InParty("jaheira")  // Jaheira
+		NumInParty(6)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("bd_party_check","bd6200",5)
+		StartCutSceneEx("bdcut64x",TRUE)
+END
+
+IF
+	Global("bd_party_check","bd6200",5)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		StartCutSceneEx("bdcut65",TRUE)
+END
+
