@@ -1,14 +1,19 @@
 BACKUP ~EET_Fix/backup~
 AUTHOR ~Roxanne@baldursextendedworld.com~
 
-VERSION ~v1~
+VERSION ~v1.1~
+
+AUTO_TRA ~EET_Fix/%s~
+
+LANGUAGE ~English~ ~english~ ~EET_Fix/english/setup.tra~
+LANGUAGE ~Russian~ ~russian~ ~EET_Fix/russian/setup.tra~
 
 BEGIN ~EET Fix~
 
 //Black Pit creature fix
 COPY ~EET_Fix/BPLLYRK.CRE~ ~override~
-SAY NAME1 Llyrk
-SAY NAME2 Llyrk
+SAY NAME1 @1
+SAY NAME2 @1
 
 COMPILE ~EET_Fix/BPSKEL.BAF~
 
@@ -58,7 +63,7 @@ EXTEND_TOP ~bd0120.bcs~ ~EET_Fix/bd0120cha.baf~
 
 //Name Shadow Thief kidnapping scene
 STRING_SET
-239808 ~They all do, Mae'Var. For the moment.~
+239808 @2
 
 //Marek Potion
 COPY ~EET_Fix/potn47.itm~ ~override~
@@ -81,8 +86,8 @@ BUT_ONLY
 // Drizzt Saga Compatibility
 ACTION_IF FILE_EXISTS_IN_GAME ~F_Bel.cre~ THEN BEGIN
 COPY_EXISTING ~F_Bel.cre~ ~override~
-     SAY NAME1 Eltab
-     SAY NAME2 Eltab
+     SAY NAME1 @3
+     SAY NAME2 @3
 END
 
 // Finch NPC Compatibility
@@ -111,9 +116,9 @@ ADD_KIT ~CVMystra~
 ~0x00004000     3~
 ~FC0~
 ~* * * * * * * * * * * * * * * * * * * *~
-SAY ~priestess of Mystra~
-SAY ~Priestess Of Mystra~
-SAY ~Priestess Of Mystra~
+SAY @967
+SAY @765
+SAY @766
 
 INCLUDE ~SandrahNPC/Kit/fl#add_kit_ee.tpa~
 LAF fl#add_kit_ee 

@@ -1,7 +1,7 @@
 IF
 	Global("bd_party_check","bd6200",0)
-	!Dead("imoen")  // Imoen
-	!InParty("imoen")  // Imoen
+	!Dead("imoen")
+	!InParty("imoen")
 	NumInPartyLT(6)
 THEN
 	RESPONSE #100
@@ -15,8 +15,8 @@ END
 IF
 	Global("bd_party_check","bd6200",0)
 	OR(3)
-		Dead("imoen")  // Imoen
-		InParty("imoen")  // Imoen
+		Dead("imoen")
+		InParty("imoen")
 		NumInParty(6)
 THEN
 	RESPONSE #100
@@ -28,8 +28,8 @@ END
 IF
 	Global("bd_party_check","bd6200",1)
 	Global("bd_move_minsc","bd6200",1)
-	!Dead("minsc")  // Minsc
-	!InParty("minsc")  // Minsc
+	!Dead("minsc")
+	!InParty("minsc")
 	NumInPartyLT(6)
 THEN
 	RESPONSE #100
@@ -43,8 +43,8 @@ END
 IF
 	Global("bd_party_check","bd6200",1)
 	Global("bd_move_minsc","bd6200",1)
-	!Dead("minsc")  // Minsc
-	!InParty("minsc")  // Minsc
+	!Dead("minsc")
+	!InParty("minsc")
 	NumInParty(6)
 THEN
 	RESPONSE #100
@@ -59,8 +59,8 @@ IF
 	Global("bd_party_check","bd6200",1)
 	OR(4)
 		Global("bd_move_minsc","bd6200",0)
-		Dead("minsc")  // Minsc
-		InParty("minsc")  // Minsc
+		Dead("minsc")
+		InParty("minsc")
 		NumInParty(6)
 THEN
 	RESPONSE #100
@@ -72,8 +72,8 @@ END
 IF
 	Global("bd_party_check","bd6200",2)
 	Global("bd_move_dynahe","bd6200",1)
-	!Dead("dynaheir")  // Dynaheir
-	!InParty("dynaheir")  // Dynaheir
+	!Dead("dynaheir")
+	!InParty("dynaheir")
 	NumInPartyLT(6)
 THEN
 	RESPONSE #100
@@ -88,8 +88,8 @@ IF
 	Global("bd_party_check","bd6200",2)
 	OR(4)
 		Global("bd_move_dynahe","bd6200",0)
-		Dead("dynaheir")  // Dynaheir
-		InParty("dynaheir")  // Dynaheir
+		Dead("dynaheir")
+		InParty("dynaheir")
 		NumInParty(6)
 THEN
 	RESPONSE #100
@@ -101,8 +101,8 @@ END
 IF
 	Global("bd_party_check","bd6200",3)
 	Global("bd_move_khalid","bd6200",1)
-	!Dead("khalid")  // Khalid
-	!InParty("khalid")  // Khalid
+	!Dead("khalid")
+	!InParty("khalid")
 	NumInPartyLT(6)
 THEN
 	RESPONSE #100
@@ -117,8 +117,8 @@ IF
 	Global("bd_party_check","bd6200",3)
 	OR(4)
 		Global("bd_move_khalid","bd6200",0)
-		Dead("khalid")  // Khalid
-		InParty("khalid")  // Khalid
+		Dead("khalid")
+		InParty("khalid")
 		NumInParty(6)
 THEN
 	RESPONSE #100
@@ -130,8 +130,8 @@ END
 IF
 	Global("bd_party_check","bd6200",4)
 	Global("bd_move_jaheir","bd6200",1)
-	!Dead("jaheira")  // Jaheira
-	!InParty("jaheira")  // Jaheira
+	!Dead("jaheira")
+	!InParty("jaheira")
 	NumInPartyLT(6)
 THEN
 	RESPONSE #100
@@ -145,8 +145,8 @@ END
 IF
 	Global("bd_party_check","bd6200",4)
 	Global("bd_move_jaheir","bd6200",1)
-	!Dead("jaheira")  // Jaheira
-	!InParty("jaheira")  // Jaheira
+	!Dead("jaheira")
+	!InParty("jaheira")
 	NumInParty(6)
 THEN
 	RESPONSE #100
@@ -161,8 +161,8 @@ IF
 	Global("bd_party_check","bd6200",4)
 	OR(4)
 		Global("bd_move_jaheir","bd6200",0)
-		Dead("jaheira")  // Jaheira
-		InParty("jaheira")  // Jaheira
+		Dead("jaheira")
+		InParty("jaheira")  
 		NumInParty(6)
 THEN
 	RESPONSE #100
