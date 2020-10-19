@@ -1,7 +1,7 @@
 BACKUP ~EET_Fix/backup~
 AUTHOR ~Roxanne@baldursextendedworld.com~
 
-VERSION ~v1.1~
+VERSION ~v1.2~
 
 AUTO_TRA ~EET_Fix/%s~
 
@@ -127,5 +127,6 @@ kit_name = CVMystra
 END
 END
 
-
+//Missing Troll fix
+EXTEND_BOTTOM ~ar0701.bcs~ ~EET_Fix/ar0701.baf~
 

@@ -1,0 +1,7 @@
+IF
+Global("Rogtrospawn","ar0701",0)
+THEN
+RESPONSE #100
+SetGlobal("Rogtrospawn","ar0701",1)
+CreateCreature("Rogtro02",[452.1491],E)	
+END
