@@ -1,7 +1,7 @@
 BACKUP ~EET_Fix/backup~
 AUTHOR ~Roxanne@baldursextendedworld.com~
 
-VERSION ~v1.2~
+VERSION ~v1.3~
 
 AUTO_TRA ~EET_Fix/%s~
 
@@ -9,6 +9,9 @@ LANGUAGE ~English~ ~english~ ~EET_Fix/english/setup.tra~
 LANGUAGE ~Russian~ ~russian~ ~EET_Fix/russian/setup.tra~
 
 BEGIN ~EET Fix~
+
+//Patch 2.6 fix
+COPY ~EET_Fix/UI.Menu~ ~override~
 
 //Black Pit creature fix
 COPY ~EET_Fix/BPLLYRK.CRE~ ~override~
@@ -90,10 +93,13 @@ COPY_EXISTING ~F_Bel.cre~ ~override~
      SAY NAME2 @3
 END
 
-// Finch NPC Compatibility
-ACTION_IF FILE_EXISTS_IN_GAME ~Sufinch4.cre~ THEN BEGIN
-EXTEND_BOTTOM ~BD0103.bcs~ ~EET_Fix/BD0103.baf~
+ACTION_IF FILE_EXISTS_IN_GAME ~CMTThor.cre~ THEN BEGIN
+COPY_EXISTING ~CMTThor.cre~ ~override~
+              WRITE_ASCII 0x280 ~CMTThor~
 END
+
+// Remove joined NPCs in EET
+EXTEND_BOTTOM ~BD0103.bcs~ ~EET_Fix/BD0103.baf~
 
 //Adoy in SoA Fix
 EXTEND_TOP ~oh2010.bcs~ ~EET_Fix/OH2010.baf~

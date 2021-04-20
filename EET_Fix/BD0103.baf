@@ -10,3 +10,43 @@ SmallWait(1)
 ActionOverride("sufinch",DestroySelf())
 Continue()
 END
+
+IF
+OR(2)
+InMyArea("cmtthor")
+InPartyAllowDead("cmtthor")
+GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+RESPONSE #100
+ActionOverride("cmtthor",LeaveParty())
+SmallWait(1)
+ActionOverride("cmtthor",DestroySelf())
+Continue()
+END
+
+IF
+OR(2)
+InMyArea("cmtnikita")
+InPartyAllowDead("cmtnikita")
+GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+RESPONSE #100
+ActionOverride("cmtnikita",LeaveParty())
+SmallWait(1)
+ActionOverride("cmtnikita",DestroySelf())
+Continue()
+END
+
+IF
+OR(2)
+InMyArea("cmtmorwen")
+InPartyAllowDead("cmtmorwen")
+GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+RESPONSE #100
+ActionOverride("cmtmorwen",LeaveParty())
+SmallWait(1)
+ActionOverride("cmtmorwen",DestroySelf())
+Continue()
+END
+
