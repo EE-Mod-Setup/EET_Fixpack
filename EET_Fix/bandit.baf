@@ -1,0 +1,25 @@
+IF
+  Global("bd_tranzig_dead","GLOBAL",0)
+  Dead("tranzig")
+THEN
+  RESPONSE #100
+    SetGlobal("bd_tranzig_dead","GLOBAL",1)
+    AddJournalEntry(227490,QUEST_DONE)
+    EraseJournalEntry(227489)
+    EraseJournalEntry(227405)
+    EraseJournalEntry(227491)
+    EraseJournalEntry(231447)
+    EraseJournalEntry(231448)
+    AddJournalEntry(231449,QUEST)
+END
+
+IF
+  Global("RevealBandits","GLOBAL",0)
+  OR(2)
+    Global("bd_tranzig_let_go","global",1)
+    Dead("tranzig")
+THEN
+  RESPONSE #100
+    SetGlobal("RevealBandits","GLOBAL",1)
+    RevealAreaOnMap("BG1900")
+END

@@ -64,6 +64,10 @@ BUT_ONLY IF_EXISTS
 //Set Global on SoD Transition safely
 EXTEND_TOP ~bd0120.bcs~ ~EET_Fix/bd0120cha.baf~
 
+//Clean Tranzig
+EXTEND_TOP ~bg3351.bcs~ ~EET_Fix/bandit.baf~
+EXTEND_TOP ~bg3352.bcs~ ~EET_Fix/bandit.baf~
+
 //Name Shadow Thief kidnapping scene
 STRING_SET
 239808 @2
