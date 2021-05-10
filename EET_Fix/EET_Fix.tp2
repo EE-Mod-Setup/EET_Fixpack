@@ -68,6 +68,9 @@ EXTEND_TOP ~bd0120.bcs~ ~EET_Fix/bd0120cha.baf~
 EXTEND_TOP ~bg3351.bcs~ ~EET_Fix/bandit.baf~
 EXTEND_TOP ~bg3352.bcs~ ~EET_Fix/bandit.baf~
 
+//Fix Sarevok in 2.6
+EXTEND_TOP ~bg0200.bcs~ ~EET_Fix/bg0200.baf~
+
 //Name Shadow Thief kidnapping scene
 STRING_SET
 239808 @2

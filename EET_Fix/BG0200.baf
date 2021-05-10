@@ -1,0 +1,7 @@
+IF
+Global("SarevokBehavior","GLOBAL",3)
+Dead("Sarevok")
+THEN
+RESPONSE #100
+SetGlobal("SarevokBehavior","GLOBAL",5)
+END
