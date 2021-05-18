@@ -143,3 +143,6 @@ END
 //Missing Troll fix
 EXTEND_BOTTOM ~ar0701.bcs~ ~EET_Fix/ar0701.baf~
 
+//AcLetec fix
+EXTEND_TOP ~bg1002.bcs~ ~EET_Fix/bg1002.baf~
+

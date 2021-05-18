@@ -1,0 +1,14 @@
+IF
+Dead("cultd1")  // Cult Guard
+Dead("cultd2")  // Cult Guard
+Dead("cultd3")  // Cult Guard
+Dead("cultd4")  // Cult Guard
+Dead("cultd5")  // Cult Guard
+Dead("cultd6")  // Cult Guard
+!Dead("tanar")  // Tanar'ri
+HasItem("minhp1","tanar")
+THEN
+RESPONSE #100
+ActionOverride("tanar",DestroyItem("minhp1"))
+Continue()
+END
