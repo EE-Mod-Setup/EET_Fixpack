@@ -10,9 +10,6 @@ LANGUAGE ~Russian~ ~russian~ ~EET_Fix/russian/setup.tra~
 
 BEGIN ~EET Fix~
 
-//Patch 2.6 fix
-COPY ~EET_Fix/UI.Menu~ ~override~
-
 //Black Pit creature fix
 COPY ~EET_Fix/BPLLYRK.CRE~ ~override~
 SAY NAME1 @1
